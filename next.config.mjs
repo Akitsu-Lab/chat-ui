@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
+    const apiHost = process.env.API_HOST || "localhost";
     return [
       {
-        source: "*",
-        destination: "http://localhost:8080/*", // バックエンドのAPIエンドポイント
+        source: "/:path*",
+        destination: `http://${apiHost}:8080/:path*`,
       },
     ];
   },
