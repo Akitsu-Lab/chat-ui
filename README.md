@@ -1,5 +1,9 @@
 ## Getting Started
 
+```sh
+npm install
+```
+
 First, run the development server:
 
 ```bash
