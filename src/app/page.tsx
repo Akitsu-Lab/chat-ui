@@ -7,7 +7,7 @@ export default function Home() {
   const [data, setData] = useState<Chatroom[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/chatrooms")
+    fetch("/chatrooms")
       .then((response) => response.json())
       .then((data) => {
         setData(data);
